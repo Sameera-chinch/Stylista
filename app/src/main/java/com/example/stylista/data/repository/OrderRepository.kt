@@ -125,60 +125,72 @@ object OrderRepository {
             )
             orderDao.insertOrder(orderEntity)
 
-            // 3. Dual-write atomic order to Firestore users/{uid}/orders/{orderNumber}
+            // 3. Write atomic order and order summary to Firestore:
+            //    a) Root 'orders/{orderNumber}' collection (Visible immediately on Firebase Console main dashboard)
+            //    b) Nested 'users/{uid}/orders/{orderNumber}' subcollection
+            //    c) Merge 'orderSummary' and 'lastOrder' directly into 'users/{uid}' document
             try {
                 val firestore = FirebaseFirestore.getInstance()
-                val firestoreMap = hashMapOf(
-                    "orderId" to orderNumber,
-                    "userId" to userId,
-                    "items" to orderItems.map { item ->
-                        hashMapOf(
-                            "productId" to item.productId,
-                            "name" to item.name,
-                            "price" to item.price,
-                            "size" to item.size,
-                            "quantity" to item.quantity,
-                            "imageUrl" to item.imageUrl
-                        )
-                    },
-                    "subtotal" to subtotal,
-                    "deliveryFee" to deliveryFee,
-                    "discountAmount" to discountAmount,
-                    "total" to totalAmount,
-                    "payment" to hashMapOf(
-                        "method" to paymentMethod,
-                        "status" to paymentStatus,
-                        "razorpayPaymentId" to razorpayPaymentId
-                    ),
-                    "deliveryAddress" to hashMapOf(
-                        "name" to address.name,
-                        "phone" to address.phone,
-                        "pincode" to address.pincode,
-                        "houseFlat" to address.houseFlat,
-                        "streetArea" to address.streetArea,
-                        "landmark" to address.landmark,
-                        "city" to address.city,
-                        "state" to address.state,
-                        "type" to address.type
-                    ),
-                    "status" to initialStatus,
-                    "statusHistory" to initialHistory.map { h ->
-                        hashMapOf(
-                            "status" to h.status,
-                            "timestamp" to h.timestamp,
-                            "note" to h.note
-                        )
-                    },
-                    "createdAt" to now,
-                    "estimatedDeliveryDate" to estimatedDelivery
+                val firestoreMap = buildFirestoreOrderMap(
+                    orderNumber = orderNumber,
+                    userId = userId,
+                    orderItems = orderItems,
+                    subtotal = subtotal,
+                    deliveryFee = deliveryFee,
+                    discountAmount = discountAmount,
+                    totalAmount = totalAmount,
+                    paymentMethod = paymentMethod,
+                    paymentStatus = paymentStatus,
+                    razorpayPaymentId = razorpayPaymentId,
+                    address = address,
+                    status = initialStatus,
+                    statusHistory = initialHistory,
+                    createdAt = now,
+                    estimatedDeliveryDate = estimatedDelivery
                 )
 
-                firestore.collection("users")
-                    .document(userId)
-                    .collection("orders")
-                    .document(orderNumber)
-                    .set(firestoreMap)
-                    .await()
+                // 1. Root /orders/{orderNumber}
+                try {
+                    firestore.collection("orders")
+                        .document(orderNumber)
+                        .set(firestoreMap)
+                        .await()
+                    Log.d(TAG, "Order $orderNumber written to root /orders collection")
+                } catch (e: Exception) {
+                    Log.w(TAG, "Root /orders write error: ${e.message}")
+                }
+
+                // 2. User-scoped /users/{userId}/orders/{orderNumber}
+                try {
+                    firestore.collection("users")
+                        .document(userId)
+                        .collection("orders")
+                        .document(orderNumber)
+                        .set(firestoreMap)
+                        .await()
+                    Log.d(TAG, "Order $orderNumber written to users/$userId/orders")
+                } catch (e: Exception) {
+                    Log.w(TAG, "User /orders write error: ${e.message}")
+                }
+
+                // 3. User document /users/{userId} summary fields
+                try {
+                    @Suppress("UNCHECKED_CAST")
+                    val orderSummaryMap = firestoreMap["orderSummary"] as? Map<String, Any> ?: emptyMap()
+                    val userSummaryUpdate = hashMapOf<String, Any>(
+                        "orderSummary" to orderSummaryMap,
+                        "lastOrder" to firestoreMap,
+                        "lastOrderNumber" to orderNumber,
+                        "lastOrderAt" to now
+                    )
+                    firestore.collection("users")
+                        .document(userId)
+                        .set(userSummaryUpdate, com.google.firebase.firestore.SetOptions.merge())
+                        .await()
+                    Log.d(TAG, "Order summary merged into users/$userId document")
+                } catch (e: Exception) {
+                    Log.w(TAG, "User orderSummary update error: ${e.message}")
+                }
             } catch (e: Exception) {
                 Log.w(TAG, "Firestore write warning: ${e.message}")
             }
@@ -547,6 +559,186 @@ object OrderRepository {
         } catch (e: Exception) {
             Log.e(TAG, "parseFirestoreDoc error", e)
             null
+        }
+    }
+
+    fun buildFirestoreOrderMap(
+        orderNumber: String,
+        userId: String,
+        orderItems: List<OrderItemModel>,
+        subtotal: Int,
+        deliveryFee: Int,
+        discountAmount: Int,
+        totalAmount: Int,
+        paymentMethod: String,
+        paymentStatus: String,
+        razorpayPaymentId: String,
+        address: AddressEntity?,
+        status: String,
+        statusHistory: List<StatusHistoryModel>,
+        createdAt: Long,
+        estimatedDeliveryDate: Long
+    ): HashMap<String, Any> {
+        val orderSummaryMap = hashMapOf<String, Any>(
+            "orderNumber" to orderNumber,
+            "itemsCount" to orderItems.sumOf { it.quantity },
+            "itemCount" to orderItems.sumOf { it.quantity },
+            "subtotal" to subtotal,
+            "deliveryFee" to deliveryFee,
+            "discountAmount" to discountAmount,
+            "discount" to discountAmount,
+            "total" to totalAmount,
+            "totalAmount" to totalAmount,
+            "paymentMethod" to paymentMethod,
+            "paymentStatus" to paymentStatus,
+            "status" to status,
+            "createdAt" to createdAt,
+            "estimatedDeliveryDate" to estimatedDeliveryDate
+        )
+
+        val firestoreMap = hashMapOf<String, Any>(
+            "orderId" to orderNumber,
+            "orderNumber" to orderNumber,
+            "userId" to userId,
+            "items" to orderItems.map { item ->
+                hashMapOf(
+                    "productId" to item.productId,
+                    "name" to item.name,
+                    "price" to item.price,
+                    "size" to item.size,
+                    "quantity" to item.quantity,
+                    "imageUrl" to item.imageUrl
+                )
+            },
+            "subtotal" to subtotal,
+            "deliveryFee" to deliveryFee,
+            "discountAmount" to discountAmount,
+            "total" to totalAmount,
+            "totalAmount" to totalAmount,
+            "orderSummary" to orderSummaryMap,
+            "payment" to hashMapOf(
+                "method" to paymentMethod,
+                "status" to paymentStatus,
+                "razorpayPaymentId" to razorpayPaymentId
+            ),
+            "status" to status,
+            "statusHistory" to statusHistory.map { h ->
+                hashMapOf(
+                    "status" to h.status,
+                    "timestamp" to h.timestamp,
+                    "note" to h.note
+                )
+            },
+            "createdAt" to createdAt,
+            "estimatedDeliveryDate" to estimatedDeliveryDate
+        )
+
+        if (address != null) {
+            firestoreMap["deliveryAddress"] = hashMapOf(
+                "name" to address.name,
+                "phone" to address.phone,
+                "pincode" to address.pincode,
+                "houseFlat" to address.houseFlat,
+                "streetArea" to address.streetArea,
+                "landmark" to address.landmark,
+                "city" to address.city,
+                "state" to address.state,
+                "type" to address.type
+            )
+        }
+
+        return firestoreMap
+    }
+
+    suspend fun syncAllOrdersToFirestore(context: Context, userId: String) = withContext(Dispatchers.IO) {
+        try {
+            val db = StylistaDatabase.getInstance(context)
+            val localOrders = db.orderDao().getAllOrders(userId)
+            if (localOrders.isEmpty()) return@withContext
+
+            val firestore = FirebaseFirestore.getInstance()
+            for (order in localOrders) {
+                val model = fromEntity(order)
+                val firestoreMap = buildFirestoreOrderMap(
+                    orderNumber = model.orderNumber,
+                    userId = model.userId,
+                    orderItems = model.items,
+                    subtotal = model.subtotal,
+                    deliveryFee = model.deliveryFee,
+                    discountAmount = model.discountAmount,
+                    totalAmount = model.totalAmount,
+                    paymentMethod = model.paymentMethod,
+                    paymentStatus = model.paymentStatus,
+                    razorpayPaymentId = model.razorpayPaymentId,
+                    address = model.deliveryAddress,
+                    status = model.status,
+                    statusHistory = model.statusHistory,
+                    createdAt = model.createdAt,
+                    estimatedDeliveryDate = model.estimatedDeliveryDate
+                )
+
+                // 1. Root /orders/{orderNumber}
+                try {
+                    firestore.collection("orders")
+                        .document(model.orderNumber)
+                        .set(firestoreMap, com.google.firebase.firestore.SetOptions.merge())
+                        .await()
+                } catch (e: Exception) {
+                    Log.w(TAG, "syncAllOrders root /orders error: ${e.message}")
+                }
+
+                // 2. User /users/{userId}/orders/{orderNumber}
+                try {
+                    firestore.collection("users")
+                        .document(userId)
+                        .collection("orders")
+                        .document(model.orderNumber)
+                        .set(firestoreMap, com.google.firebase.firestore.SetOptions.merge())
+                        .await()
+                } catch (e: Exception) {
+                    Log.w(TAG, "syncAllOrders user /orders error: ${e.message}")
+                }
+            }
+
+            // 3. User document orderSummary & lastOrder
+            val latest = localOrders.maxByOrNull { it.timestamp }
+            if (latest != null) {
+                val latestModel = fromEntity(latest)
+                val summaryMap = hashMapOf<String, Any>(
+                    "orderNumber" to latestModel.orderNumber,
+                    "itemCount" to latestModel.items.sumOf { it.quantity },
+                    "itemsCount" to latestModel.items.sumOf { it.quantity },
+                    "subtotal" to latestModel.subtotal,
+                    "deliveryFee" to latestModel.deliveryFee,
+                    "discountAmount" to latestModel.discountAmount,
+                    "discount" to latestModel.discountAmount,
+                    "total" to latestModel.totalAmount,
+                    "totalAmount" to latestModel.totalAmount,
+                    "paymentMethod" to latestModel.paymentMethod,
+                    "paymentStatus" to latestModel.paymentStatus,
+                    "status" to latestModel.status,
+                    "createdAt" to latestModel.createdAt,
+                    "estimatedDeliveryDate" to latestModel.estimatedDeliveryDate
+                )
+                try {
+                    firestore.collection("users")
+                        .document(userId)
+                        .set(
+                            hashMapOf<String, Any>(
+                                "orderSummary" to summaryMap,
+                                "lastOrderNumber" to latestModel.orderNumber,
+                                "lastOrderAt" to latestModel.createdAt
+                            ),
+                            com.google.firebase.firestore.SetOptions.merge()
+                        )
+                        .await()
+                    Log.d(TAG, "Synced orderSummary into users/$userId document")
+                } catch (e: Exception) {
+                    Log.w(TAG, "syncAllOrders user orderSummary error: ${e.message}")
+                }
+            }
+        } catch (e: Exception) {
+            Log.w(TAG, "syncAllOrdersToFirestore warning: ${e.message}")
         }
     }
 }

@@ -47,6 +47,8 @@ class HomeActivity : AppCompatActivity() {
         lifecycleScope.launch(Dispatchers.IO) {
             ProductRepository.ensureDatabaseInitialized(applicationContext)
             ProductRepository.syncWithFirestore(applicationContext)
+            val uid = UserPreferencesHelper.getActiveUserId(applicationContext)
+            com.example.stylista.data.repository.OrderRepository.syncAllOrdersToFirestore(applicationContext, uid)
         }
     }
 
