@@ -6,6 +6,8 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
+import com.example.stylista.database.entities.CartEntity
+import com.example.stylista.database.entities.ProductEntity
 import com.example.stylista.database.entities.*
 
 @Dao

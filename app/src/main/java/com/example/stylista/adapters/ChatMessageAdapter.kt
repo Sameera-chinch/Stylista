@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.stylista.database.entities.ProductEntity
+import com.example.stylista.models.ChatMessage
 import com.example.stylista.R
 import com.example.stylista.activities.*
 import com.example.stylista.database.entities.*

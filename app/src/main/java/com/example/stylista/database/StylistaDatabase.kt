@@ -11,7 +11,19 @@ import com.example.stylista.repositories.ProductRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import com.example.stylista.database.dao.AddressDao
+import com.example.stylista.database.dao.CampusLocationDao
+import com.example.stylista.database.dao.CartDao
+import com.example.stylista.database.dao.OrderDao
+import com.example.stylista.database.dao.ProductDao
+import com.example.stylista.database.dao.WishlistDao
 import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.AddressEntity
+import com.example.stylista.database.entities.CampusLocationEntity
+import com.example.stylista.database.entities.CartEntity
+import com.example.stylista.database.entities.OrderEntity
+import com.example.stylista.database.entities.ProductEntity
+import com.example.stylista.database.entities.WishlistEntity
 import com.example.stylista.database.entities.*
 
 @Database(
