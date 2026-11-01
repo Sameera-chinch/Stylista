@@ -260,7 +260,10 @@ class ChatActivity : AppCompatActivity() {
             val db = StylistaDatabase.getInstance(this@ChatActivity)
             val matchingProducts = if (response.recommendedProductIds.isNotEmpty()) {
                 try {
-                    db.productDao().getProductsByIds(response.recommendedProductIds)
+                    val fetched = db.productDao().getProductsByIds(response.recommendedProductIds)
+                    val productMap = fetched.associateBy { it.id }
+                    // Preserve the exact recommendation order: primary queried product first, then accessories
+                    response.recommendedProductIds.mapNotNull { productMap[it] }
                 } catch (e: Exception) {
                     emptyList()
                 }
