@@ -3,6 +3,15 @@ package com.example.stylista
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import com.example.stylista.activities.*
+import com.example.stylista.adapters.*
+import com.example.stylista.chatbot.*
+import com.example.stylista.database.StylistaDatabase
+import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.*
+import com.example.stylista.models.*
+import com.example.stylista.repositories.*
+import com.example.stylista.utils.*
 
 class PhonePincodeValidationTest {
 

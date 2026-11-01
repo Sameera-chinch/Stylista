@@ -1,8 +1,17 @@
 package com.example.stylista
 
-import com.example.stylista.utils.LocalFashionStylist
+import com.example.stylista.chatbot.LocalFashionStylist
 import org.junit.Assert.*
 import org.junit.Test
+import com.example.stylista.activities.*
+import com.example.stylista.adapters.*
+import com.example.stylista.chatbot.*
+import com.example.stylista.database.StylistaDatabase
+import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.*
+import com.example.stylista.models.*
+import com.example.stylista.repositories.*
+import com.example.stylista.utils.*
 
 class LocalFashionStylistTest {
 

@@ -1,14 +1,23 @@
 package com.example.stylista
 
 import android.content.Context
-import com.example.stylista.utils.ChatbotResponse
-import com.example.stylista.utils.ChatbotTierManager
-import com.example.stylista.utils.IChatbotTierStrategy
+import com.example.stylista.chatbot.ChatbotResponse
+import com.example.stylista.chatbot.ChatbotTierManager
+import com.example.stylista.chatbot.IChatbotTierStrategy
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import com.example.stylista.activities.*
+import com.example.stylista.adapters.*
+import com.example.stylista.chatbot.*
+import com.example.stylista.database.StylistaDatabase
+import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.*
+import com.example.stylista.models.*
+import com.example.stylista.repositories.*
+import com.example.stylista.utils.*
 
 class ChatbotTierManagerTest {
 

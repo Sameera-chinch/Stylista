@@ -1,11 +1,20 @@
 package com.example.stylista
 
-import com.example.stylista.database.CartEntity
-import com.example.stylista.database.ProductEntity
+import com.example.stylista.database.entities.CartEntity
+import com.example.stylista.database.entities.ProductEntity
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import java.text.NumberFormat
 import java.util.Locale
+import com.example.stylista.activities.*
+import com.example.stylista.adapters.*
+import com.example.stylista.chatbot.*
+import com.example.stylista.database.StylistaDatabase
+import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.*
+import com.example.stylista.models.*
+import com.example.stylista.repositories.*
+import com.example.stylista.utils.*
 
 class CartCalculationTest {
 

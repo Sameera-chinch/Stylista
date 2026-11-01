@@ -8,6 +8,14 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.stylista.R
 import com.google.android.material.snackbar.Snackbar
+import com.example.stylista.activities.*
+import com.example.stylista.adapters.*
+import com.example.stylista.chatbot.*
+import com.example.stylista.database.StylistaDatabase
+import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.*
+import com.example.stylista.models.*
+import com.example.stylista.repositories.*
 
 object UiFeedback {
 

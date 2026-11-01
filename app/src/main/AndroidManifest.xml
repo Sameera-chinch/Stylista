@@ -23,7 +23,7 @@
             android:value="${MAPS_API_KEY}" />
 
         <activity
-            android:name=".SplashActivity"
+            android:name=".activities.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Stylista">
@@ -34,114 +34,114 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".CampusMapActivity"
+            android:name=".activities.CampusMapActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".activities.SignupActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".StyleActivity"
+            android:name=".activities.StyleActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".activities.HomeActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ProductActivity"
+            android:name=".activities.ProductActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".WishlistActivity"
+            android:name=".activities.WishlistActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".CartActivity"
+            android:name=".activities.CartActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".CheckoutActivity"
+            android:name=".activities.CheckoutActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SavedAddressActivity"
+            android:name=".activities.SavedAddressActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".AddEditAddressActivity"
+            android:name=".activities.AddEditAddressActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".OrderSuccessActivity"
+            android:name=".activities.OrderSuccessActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MyOrdersActivity"
+            android:name=".activities.MyOrdersActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".OrderDetailsActivity"
+            android:name=".activities.OrderDetailsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TrackOrderActivity"
+            android:name=".activities.TrackOrderActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".CategoriesActivity"
+            android:name=".activities.CategoriesActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DiscoverActivity"
+            android:name=".activities.DiscoverActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".activities.ProfileActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SearchActivity"
+            android:name=".activities.SearchActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".SubcategoriesActivity"
+            android:name=".activities.SubcategoriesActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ProductListingActivity"
+            android:name=".activities.ProductListingActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".NetworkActivity"
+            android:name=".activities.NetworkActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ChatActivity"
+            android:name=".activities.ChatActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />

@@ -1,8 +1,17 @@
 package com.example.stylista.utils
 
-import com.example.stylista.database.CampusLocationEntity
+import com.example.stylista.database.entities.CampusLocationEntity
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
+import com.example.stylista.R
+import com.example.stylista.activities.*
+import com.example.stylista.adapters.*
+import com.example.stylista.chatbot.*
+import com.example.stylista.database.StylistaDatabase
+import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.*
+import com.example.stylista.models.*
+import com.example.stylista.repositories.*
 
 /**
  * Configuration for Stylista Boutiques, Campus Stores, and Fashion Pickup Hubs.

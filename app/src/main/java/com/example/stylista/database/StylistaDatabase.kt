@@ -7,10 +7,12 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.stylista.utils.CampusLocationsData
-import com.example.stylista.utils.ProductRepository
+import com.example.stylista.repositories.ProductRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.*
 
 @Database(
     entities = [

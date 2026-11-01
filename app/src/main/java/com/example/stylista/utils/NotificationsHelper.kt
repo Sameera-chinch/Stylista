@@ -10,16 +10,24 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
-import com.example.stylista.CampusMapActivity
-import com.example.stylista.OrderDetailsActivity
+import com.example.stylista.activities.CampusMapActivity
+import com.example.stylista.activities.OrderDetailsActivity
 import com.example.stylista.R
-import com.example.stylista.TrackOrderActivity
-import com.example.stylista.data.repository.OrderRepository
+import com.example.stylista.activities.TrackOrderActivity
+import com.example.stylista.repositories.OrderRepository
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import com.example.stylista.activities.*
+import com.example.stylista.adapters.*
+import com.example.stylista.chatbot.*
+import com.example.stylista.database.StylistaDatabase
+import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.*
+import com.example.stylista.models.*
+import com.example.stylista.repositories.*
 
 object NotificationsHelper {
 

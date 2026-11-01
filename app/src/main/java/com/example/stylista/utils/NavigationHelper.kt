@@ -4,14 +4,22 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.View
-import com.example.stylista.CartActivity
-import com.example.stylista.CategoriesActivity
-import com.example.stylista.DiscoverActivity
-import com.example.stylista.HomeActivity
-import com.example.stylista.ProductActivity
-import com.example.stylista.ProfileActivity
+import com.example.stylista.activities.CartActivity
+import com.example.stylista.activities.CategoriesActivity
+import com.example.stylista.activities.DiscoverActivity
+import com.example.stylista.activities.HomeActivity
+import com.example.stylista.activities.ProductActivity
+import com.example.stylista.activities.ProfileActivity
 import com.example.stylista.R
-import com.example.stylista.WishlistActivity
+import com.example.stylista.activities.WishlistActivity
+import com.example.stylista.activities.*
+import com.example.stylista.adapters.*
+import com.example.stylista.chatbot.*
+import com.example.stylista.database.StylistaDatabase
+import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.*
+import com.example.stylista.models.*
+import com.example.stylista.repositories.*
 
 object NavigationHelper {
 

@@ -1,10 +1,19 @@
 package com.example.stylista
 
-import com.example.stylista.database.CartEntity
-import com.example.stylista.database.ProductEntity
-import com.example.stylista.database.WishlistEntity
+import com.example.stylista.database.entities.CartEntity
+import com.example.stylista.database.entities.ProductEntity
+import com.example.stylista.database.entities.WishlistEntity
 import org.junit.Assert.*
 import org.junit.Test
+import com.example.stylista.activities.*
+import com.example.stylista.adapters.*
+import com.example.stylista.chatbot.*
+import com.example.stylista.database.StylistaDatabase
+import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.*
+import com.example.stylista.models.*
+import com.example.stylista.repositories.*
+import com.example.stylista.utils.*
 
 class UserScopingAndFilteringTest {
 

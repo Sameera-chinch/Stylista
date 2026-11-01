@@ -1,9 +1,17 @@
 package com.example.stylista.utils
 
 import android.content.Context
-import com.example.stylista.database.ProductEntity
+import com.example.stylista.database.entities.ProductEntity
 import com.example.stylista.database.StylistaDatabase
 import kotlin.math.abs
+import com.example.stylista.R
+import com.example.stylista.activities.*
+import com.example.stylista.adapters.*
+import com.example.stylista.chatbot.*
+import com.example.stylista.database.dao.*
+import com.example.stylista.database.entities.*
+import com.example.stylista.models.*
+import com.example.stylista.repositories.*
 
 object RecommendationEngine {
 
