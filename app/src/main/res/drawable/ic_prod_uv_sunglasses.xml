@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Bridge -->
+    <path android:strokeColor="#D4AF37" android:strokeWidth="4" android:pathData="M94,98 L106,98" />
+    <!-- Left Square Frame -->
+    <path android:fillColor="#212121" android:strokeColor="#D4AF37" android:strokeWidth="3.5" android:pathData="M36,78 L92,78 A6,6 0 0,1 98,84 L96,140 A8,8 0 0,1 88,148 L42,148 A8,8 0 0,1 34,140 L34,84 A6,6 0 0,1 36,78 Z" />
+    <path android:fillColor="#424242" android:pathData="M40,84 L90,84 L88,102 L40,102 Z" />
+    <!-- Right Square Frame -->
+    <path android:fillColor="#212121" android:strokeColor="#D4AF37" android:strokeWidth="3.5" android:pathData="M108,78 L164,78 A6,6 0 0,1 170,84 L170,140 A8,8 0 0,1 162,148 L116,148 A8,8 0 0,1 108,140 L106,84 A6,6 0 0,1 108,78 Z" />
+    <path android:fillColor="#424242" android:pathData="M112,84 L162,84 L160,102 L112,102 Z" />
+</vector>

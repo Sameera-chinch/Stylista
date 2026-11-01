@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Black Dress Strap -->
+    <path android:fillColor="#212121" android:strokeColor="#111111" android:strokeWidth="2.5" android:pathData="M25,92 L175,92 L175,118 L25,118 Z" />
+    <!-- Interlocking Double-O Gold Buckle -->
+    <path android:strokeColor="#D4AF37" android:strokeWidth="4.5" android:fillColor="#00000000" android:pathData="M88,105 A18,18 0 1,0 88,106" />
+    <path android:strokeColor="#E6B800" android:strokeWidth="4.5" android:fillColor="#00000000" android:pathData="M112,105 A18,18 0 1,0 112,106" />
+</vector>

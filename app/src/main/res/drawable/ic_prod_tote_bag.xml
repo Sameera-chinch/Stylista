@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <path android:strokeColor="#EAE5D8" android:strokeWidth="1.5" android:pathData="M24,20 L176,20 A12,12 0 0,1 188,32 L188,164 A12,12 0 0,1 176,176 L24,176 A12,12 0 0,1 12,164 L12,32 A12,12 0 0,1 24,20 Z" />
+    <!-- Straps -->
+    <path android:strokeColor="#659ACB" android:strokeWidth="4.5" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M74,90 L74,52 C74,40 126,40 126,52 L126,90" />
+    <!-- Tote Body -->
+    <path android:fillColor="#FFEFA6" android:strokeColor="#2C302E" android:strokeWidth="3.5" android:strokeLineJoin="round" android:pathData="M52,90 L60,162 A8,8 0 0,0 68,170 L132,170 A8,8 0 0,0 140,162 L148,90 Z" />
+    <!-- Front Pocket -->
+    <path android:fillColor="#FFFDF8" android:strokeColor="#2C302E" android:strokeWidth="2.5" android:pathData="M74,115 L126,115 L124,152 L76,152 Z" />
+    <path android:strokeColor="#659ACB" android:strokeWidth="2" android:pathData="M90,115 L110,115" />
+</vector>

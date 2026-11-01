@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Ruffled Scrunchie Outer Cloud -->
+    <path android:fillColor="#DCEBFA" android:strokeColor="#659ACB" android:strokeWidth="3.5" android:strokeLineJoin="round" android:pathData="M100,50 Q120,40 140,55 Q165,65 160,95 Q170,120 150,140 Q135,165 105,160 Q80,170 60,145 Q35,135 45,105 Q35,80 60,60 Q80,35 100,50 Z" />
+    <!-- Hollow Center -->
+    <path android:fillColor="#FDFBF7" android:strokeColor="#659ACB" android:strokeWidth="2.5" android:pathData="M100,85 A20,20 0 1,0 100,125 A20,20 0 1,0 100,85" />
+    <!-- Fabric Creases -->
+    <path android:strokeColor="#A2C2E8" android:strokeWidth="2" android:strokeLineCap="round" android:pathData="M100,50 L100,85 M150,95 L120,105 M140,145 L115,120 M60,140 L85,115 M45,100 L80,100" />
+</vector>

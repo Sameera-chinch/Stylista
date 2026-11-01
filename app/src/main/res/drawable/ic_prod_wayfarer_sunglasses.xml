@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Wayfarer Frame Top Bar -->
+    <path android:strokeColor="#1B1F23" android:strokeWidth="5" android:strokeLineCap="round" android:pathData="M34,84 L166,84" />
+    <!-- Left Lens -->
+    <path android:fillColor="#1B2631" android:strokeColor="#1B1F23" android:strokeWidth="3.5" android:pathData="M40,86 L90,86 L85,138 C85,145 50,146 45,138 Z" />
+    <path android:fillColor="#2E4053" android:pathData="M45,90 L85,90 L80,105 L45,105 Z" />
+    <!-- Right Lens -->
+    <path android:fillColor="#1B2631" android:strokeColor="#1B1F23" android:strokeWidth="3.5" android:pathData="M110,86 L160,86 L155,138 C150,146 115,145 115,138 Z" />
+    <path android:fillColor="#2E4053" android:pathData="M115,90 L155,90 L150,105 L115,105 Z" />
+    <!-- Silver studs -->
+    <path android:fillColor="#E0E0E0" android:pathData="M38,82 A2,2 0 1,0 42,82 A2,2 0 1,0 38,82 M158,82 A2,2 0 1,0 162,82 A2,2 0 1,0 158,82" />
+</vector>

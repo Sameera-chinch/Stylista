@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Ring Band -->
+    <path android:strokeColor="#D4AF37" android:strokeWidth="5" android:fillColor="#00000000" android:pathData="M100,82 C125,82 144,103 144,130 C144,157 125,168 100,168 C75,168 56,157 56,130 C56,103 75,82 100,82 Z" />
+    <!-- Crystal Facet Diamond Top -->
+    <path android:fillColor="#DCEBFA" android:strokeColor="#659ACB" android:strokeWidth="2.5" android:strokeLineJoin="round" android:pathData="M84,62 L116,62 L128,78 L100,98 L72,78 Z" />
+    <path android:strokeColor="#659ACB" android:strokeWidth="1.5" android:pathData="M72,78 L128,78 M100,62 L100,98" />
+    <path android:fillColor="#FFFFFF" android:pathData="M92,68 L98,68 L96,74 Z" />
+</vector>

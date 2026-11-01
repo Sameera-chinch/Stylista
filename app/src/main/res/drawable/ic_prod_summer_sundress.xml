@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Straps -->
+    <path android:strokeColor="#E6A817" android:strokeWidth="3" android:pathData="M78,42 L78,65 M122,42 L122,65" />
+    <!-- Bodice -->
+    <path android:fillColor="#FFEFA6" android:strokeColor="#2C302E" android:strokeWidth="3" android:pathData="M74,65 L126,65 L120,102 L80,102 Z" />
+    <!-- Tiered Flared Skirt -->
+    <path android:fillColor="#FFF4BD" android:strokeColor="#2C302E" android:strokeWidth="3.5" android:strokeLineJoin="round" android:pathData="M80,102 L120,102 L138,135 L62,135 Z" />
+    <path android:fillColor="#FFF9E1" android:strokeColor="#2C302E" android:strokeWidth="3.5" android:strokeLineJoin="round" android:pathData="M62,135 L138,135 L158,168 L42,168 Z" />
+    <!-- Cute Waist Ribbon -->
+    <path android:fillColor="#659ACB" android:pathData="M95,100 L105,100 L108,110 L92,110 Z" />
+</vector>

@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Steel Links Top -->
+    <path android:fillColor="#CFD8DC" android:strokeColor="#90A4AE" android:strokeWidth="2" android:pathData="M80,32 L120,32 L120,62 L80,62 Z" />
+    <path android:fillColor="#ECEFF1" android:pathData="M92,34 L108,34 L108,60 L92,60 Z" />
+    <!-- Steel Links Bottom -->
+    <path android:fillColor="#CFD8DC" android:strokeColor="#90A4AE" android:strokeWidth="2" android:pathData="M80,138 L120,138 L120,168 L80,168 Z" />
+    <path android:fillColor="#ECEFF1" android:pathData="M92,140 L108,140 L108,166 L92,166 Z" />
+    <!-- Midnight Blue Dial -->
+    <path android:fillColor="#1A237E" android:strokeColor="#90A4AE" android:strokeWidth="4" android:pathData="M100,58 A42,42 0 1,0 100,142 A42,42 0 1,0 100,58" />
+    <!-- Silver Hands & Luminescent Marks -->
+    <path android:strokeColor="#ECEFF1" android:strokeWidth="2.5" android:strokeLineCap="round" android:pathData="M100,100 L100,75 M100,100 L120,105" />
+    <path android:fillColor="#E53935" android:pathData="M99,100 L99,80" />
+</vector>

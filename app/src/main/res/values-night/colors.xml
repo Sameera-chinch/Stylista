@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FF1E1E1E</color>
+    <color name="pure_white">#FFFFFFFF</color>
+    <color name="pure_black">#FF000000</color>
+    
+    <!-- Primary: Butter Yellow Palette (High Contrast Dark Text) -->
+    <color name="butter_yellow">#FFF3B0</color>
+    <color name="soft_butter_yellow">#FFF3B0</color>
+    <color name="butter_yellow_light">#3A341C</color>
+    <color name="butter_yellow_accent">#E6D06C</color>
+    <color name="butter_yellow_dark">#D1BA52</color>
+    <color name="colorButterYellow">#FFF3B0</color>
+    <color name="colorButterYellowLight">#3A341C</color>
+
+    <!-- Secondary: Pastel Baby Blue Palette -->
+    <color name="pastel_baby_blue">#A2C2E8</color>
+    <color name="pastel_baby_blue_light">#1E2C3D</color>
+    <color name="soft_blue_bg">#1E2C3D</color>
+    <color name="pastel_baby_blue_dark">#7FA4D4</color>
+    <color name="primary_blue">#7FA4D4</color>
+    <color name="primary_blue_dark">#9BBFE8</color>
+    <color name="primary_blue_light">#233449</color>
+    <color name="colorPastelBlue">#A2C2E8</color>
+    <color name="colorPastelBlueDark">#7FA4D4</color>
+    <color name="colorPastelBlueLight">#1E2C3D</color>
+
+    <!-- Dark Mode Backgrounds & Surfaces -->
+    <color name="warm_white">#1E1E1E</color>
+    <color name="background_cream">#121212</color>
+    <color name="background_offwhite">#121212</color>
+    <color name="card_background">#1E1E1E</color>
+    <color name="cream_card">#242424</color>
+    <color name="colorWarmWhite">#1E1E1E</color>
+    <color name="colorCream">#121212</color>
+    <color name="colorSurface">#242424</color>
+
+    <!-- Dark Mode Typography -->
+    <color name="charcoal">#F5F5F5</color>
+    <color name="charcoal_medium">#E0E0E0</color>
+    <color name="charcoal_light">#B0B0B0</color>
+    <color name="colorCharcoal">#F5F5F5</color>
+    <color name="colorCharcoalLight">#B0B0B0</color>
+    <color name="text_primary">#F5F5F5</color>
+    <color name="text_secondary">#A0A0A0</color>
+    <color name="text_hint">#707070</color>
+    <color name="colorTextPrimary">#F5F5F5</color>
+    <color name="colorTextSecondary">#A0A0A0</color>
+    <color name="colorTextMuted">#707070</color>
+
+    <!-- Dark Mode Dividers & Borders -->
+    <color name="card_border">#666666</color>
+    <color name="neutral_light">#252525</color>
+    <color name="neutral_divider">#383838</color>
+    <color name="neutral_gray">#B0B0B0</color>
+
+    <!-- Status & Badges -->
+    <color name="success_green">#4CAF50</color>
+    <color name="forest_green">#4CAF50</color>
+    <color name="error_red">#EF5350</color>
+    <color name="badge_gold">#E5C050</color>
+    <color name="chip_selected_bg">#FFF3B0</color>
+    <color name="chip_unselected_bg">#252525</color>
+
+    <!-- High-Contrast Action Tokens (Always Dark On Pastel Buttons) -->
+    <color name="btn_primary_text">#1C1B1F</color>
+    <color name="btn_secondary_text">#1C1B1F</color>
+    <color name="btn_butter_yellow_text">#1C1B1F</color>
+    <color name="btn_baby_blue_text">#1C1B1F</color>
+
+    <!-- Map Category Colors -->
+    <color name="cat_boutique">#29B6F6</color>
+    <color name="cat_campus">#FFA726</color>
+    <color name="cat_atelier">#AB47BC</color>
+    <color name="cat_pickup">#66BB6A</color>
+    <color name="cat_accessories">#FF7043</color>
+    <color name="cat_athleisure">#F06292</color>
+    <color name="cat_academic">#42A5F5</color>
+    <color name="cat_admin">#BA68C8</color>
+    <color name="cat_food">#FFA726</color>
+    <color name="cat_facilities">#66BB6A</color>
+    <color name="cat_gates">#EF5350</color>
+
+    <!-- Map Route Colors -->
+    <color name="route_walking">#42A5F5</color>
+    <color name="route_fallback">#78909C</color>
+    <color name="route_user_accent">#26C6DA</color>
+
+    <!-- Chat Colors in Dark Mode -->
+    <color name="chat_user_bubble">#3B5D82</color>
+    <color name="chat_bot_bubble">#242424</color>
+    <color name="chat_bg_input">#1E1E1E</color>
+</resources>

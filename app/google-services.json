@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "301804192020",
+    "project_id": "stylista-db623",
+    "storage_bucket": "stylista-db623.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301804192020:android:f8e9ff7b33967086af0201",
+        "android_client_info": {
+          "package_name": "com.example.stylista"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLPvDGffiPQ-Lo2OMw4aFIEQCtBv_YV9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Top Clip Bar -->
+    <path android:fillColor="#D4AF37" android:pathData="M45,70 L155,70 A8,8 0 0,1 163,78 A8,8 0 0,1 155,86 L45,86 A8,8 0 0,1 37,78 A8,8 0 0,1 45,70 Z" />
+    <!-- Pearls on Top Clip -->
+    <path android:fillColor="#FFFFFF" android:strokeColor="#E0E0E0" android:strokeWidth="1" android:pathData="M52,78 A6,6 0 1,0 64,78 A6,6 0 1,0 52,78 M76,78 A6,6 0 1,0 88,78 A6,6 0 1,0 76,78 M100,78 A6,6 0 1,0 112,78 A6,6 0 1,0 100,78 M124,78 A6,6 0 1,0 136,78 A6,6 0 1,0 124,78" />
+    <!-- Bottom Clip Bar -->
+    <path android:fillColor="#D4AF37" android:pathData="M45,115 L155,115 A8,8 0 0,1 163,123 A8,8 0 0,1 155,131 L45,131 A8,8 0 0,1 37,123 A8,8 0 0,1 45,115 Z" />
+    <path android:fillColor="#FFEFA6" android:strokeColor="#D4AF37" android:strokeWidth="1" android:pathData="M52,123 A6,6 0 1,0 64,123 A6,6 0 1,0 52,123 M76,123 A6,6 0 1,0 88,123 A6,6 0 1,0 76,123 M100,123 A6,6 0 1,0 112,123 A6,6 0 1,0 100,123 M124,123 A6,6 0 1,0 136,123 A6,6 0 1,0 124,123" />
+</vector>

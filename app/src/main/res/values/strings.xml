@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Stylista</string>
+    <string name="title_campus_navigation">Campus Outlets &amp; Boutiques</string>
+    <string name="campus_name">Stylista Boutiques</string>
+    <string name="campus_search_hint">Search boutiques, fitting lounges, pickup hubs...</string>
+    <string name="btn_navigate">Get Directions</string>
+    <string name="btn_start_nav">Start Walk</string>
+    <string name="btn_stop_nav">Stop</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_recenter">Boutique District</string>
+    <string name="chip_all">All Places</string>
+    <string name="chip_boutique">Boutiques</string>
+    <string name="chip_campus_store">Campus Stores</string>
+    <string name="chip_atelier">Atelier &amp; Tailoring</string>
+    <string name="chip_pickup">Pickup Hubs</string>
+    <string name="chip_accessories">Accessories</string>
+    <string name="chip_athleisure">Athleisure</string>
+    <string name="arrived_destination_msg">🎉 You have arrived at %1$s!</string>
+    <string name="nav_outside_campus">Note: You are currently outside the Stylista Boutique District.</string>
+    <string name="location_permission_rationale">Stylista needs your location permission to show your current position on the map, find nearest fashion outlets, and guide you with walking directions.</string>
+    <string name="location_permission_denied">Location permission was denied. You can still explore all Stylista boutique locations on the map.</string>
+    <string name="enable_gps_prompt">Please turn on GPS / Location services so Stylista can locate nearby boutiques and guide your walk.</string>
+    <string name="error_offline_route">Using direct line route (Directions API offline / fallback).</string>
+    <string name="navigating_to">Walking to %1$s</string>
+    <string name="remaining_info">%1$s remaining • %2$s walk</string>
+    <string name="campus_map_menu_title">Stylista Outlets &amp; Store Map</string>
+    <string name="campus_map_menu_desc">Explore Stylista Boutiques, fitting lounges, and pickup stations</string>
+    <string name="map_type_dialog_title">Select Map View</string>
+    <string name="map_type_street">🗺️ General Street Map (Standard)</string>
+    <string name="map_type_satellite">🛰️ Satellite &amp; Streets</string>
+    <string name="map_type_terrain">⛰️ Terrain Street Map</string>
+    <string name="map_type_campus">👗 Stylista Themed Map</string>
+    <string name="btn_open_external_map">Open in Google Maps</string>
+    <string name="btn_street_map">Street Map</string>
+
+    <!-- AI & Recommendations -->
+    <string name="section_recommended_for_you">Recommended For You</string>
+    <string name="section_you_may_also_like">You May Also Like</string>
+    <string name="chat_title">Stylista Assistant</string>
+    <string name="chat_subtitle">Your AI fashion stylist</string>
+    <string name="chat_input_hint">Ask about styles, outfits, or match tips...</string>
+    <string name="chat_welcome_message">Hi there! 👋 I\'m your Stylista AI Assistant. How can I help you style your day or find the perfect look?</string>
+    <string name="chat_offline_error">Stylista Assistant couldn\'t connect right now. Please check your internet and try again.</string>
+    <string name="chat_permission_mic_rationale">Microphone access is needed for voice chat.</string>
+    <string name="chat_generic_error">Something went wrong. Please try again.</string>
+    <string name="chat_timeout_error">The assistant is taking too long. Please try again.</string>
+</resources>

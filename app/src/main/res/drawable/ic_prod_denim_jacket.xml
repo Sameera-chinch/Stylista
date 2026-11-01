@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Denim Body -->
+    <path android:fillColor="#4A7CA9" android:strokeColor="#2C302E" android:strokeWidth="3.5" android:strokeLineJoin="round" android:pathData="M60,65 L82,50 L118,50 L140,65 L165,115 L145,122 L138,80 L138,155 L62,155 L62,80 L55,122 L35,115 Z" />
+    <!-- Collar -->
+    <path android:fillColor="#659ACB" android:strokeColor="#2C302E" android:strokeWidth="2.5" android:pathData="M82,50 L100,75 L80,78 Z M118,50 L100,75 L120,78 Z" />
+    <!-- Flap Pockets -->
+    <path android:fillColor="#3A6C99" android:strokeColor="#2C302E" android:strokeWidth="2" android:pathData="M70,95 L92,95 L92,112 L70,112 Z M108,95 L130,95 L130,112 L108,112 Z" />
+    <!-- Brass Buttons -->
+    <path android:fillColor="#D4AF37" android:pathData="M100,82 A2.5,2.5 0 1,0 100,87 A2.5,2.5 0 1,0 100,82 M100,105 A2.5,2.5 0 1,0 100,110 A2.5,2.5 0 1,0 100,105 M100,128 A2.5,2.5 0 1,0 100,133 A2.5,2.5 0 1,0 100,128" />
+</vector>

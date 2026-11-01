@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme in Night mode. -->
+    <style name="Base.Theme.Stylista" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Brand Colors in Dark Mode -->
+        <item name="colorPrimary">@color/butter_yellow</item>
+        <item name="colorOnPrimary">#212529</item>
+        <item name="colorPrimaryContainer">#3D371E</item>
+        <item name="colorOnPrimaryContainer">#FFF3B0</item>
+
+        <item name="colorSecondary">@color/pastel_baby_blue</item>
+        <item name="colorOnSecondary">#212529</item>
+        <item name="colorSecondaryContainer">#253A52</item>
+        <item name="colorOnSecondaryContainer">#DCEBFA</item>
+
+        <!-- Surfaces & Backgrounds in Dark Mode -->
+        <item name="android:colorBackground">@color/background_cream</item>
+        <item name="colorSurface">@color/warm_white</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/neutral_light</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorOutline">@color/card_border</item>
+
+        <!-- Status & Navigation Bars in Dark Mode -->
+        <item name="android:statusBarColor">@color/background_cream</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/warm_white</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Dialog & Bottom Sheet Style -->
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Stylista.BottomSheetDialog</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Stylista.MaterialAlertDialog</item>
+        <item name="alertDialogTheme">@style/ThemeOverlay.Stylista.MaterialAlertDialog</item>
+    </style>
+
+    <style name="Theme.Stylista" parent="Base.Theme.Stylista" />
+
+    <style name="ThemeOverlay.Stylista.MaterialAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/butter_yellow</item>
+        <item name="colorOnSurface">#F5F5F5</item>
+    </style>
+
+    <style name="ThemeOverlay.Stylista.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Stylista.BottomSheet.Modal</item>
+    </style>
+
+    <style name="Widget.Stylista.BottomSheet.Modal" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/warm_white</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Stylista.BottomSheet</item>
+    </style>
+
+    <style name="ShapeAppearance.Stylista.BottomSheet" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeTopRight">24dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+</resources>

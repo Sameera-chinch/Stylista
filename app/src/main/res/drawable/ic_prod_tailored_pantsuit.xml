@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Trouser Legs -->
+    <path android:fillColor="#2D3748" android:strokeColor="#1A202C" android:strokeWidth="3" android:pathData="M78,115 L122,115 L120,172 L103,172 L100,135 L97,172 L80,172 Z" />
+    <!-- Double-Breasted Blazer Body -->
+    <path android:fillColor="#4A5568" android:strokeColor="#1A202C" android:strokeWidth="3.5" android:strokeLineJoin="round" android:pathData="M62,55 L84,42 L116,42 L138,55 L160,95 L145,102 L135,82 L136,128 L64,128 L65,82 L55,102 L40,95 Z" />
+    <!-- Sharp Lapels -->
+    <path android:fillColor="#2D3748" android:strokeColor="#1A202C" android:strokeWidth="2.5" android:pathData="M84,42 L105,75 L86,88 Z M116,42 L95,75 L114,88 Z" />
+    <!-- Buttons -->
+    <path android:fillColor="#D4AF37" android:pathData="M94,92 A2,2 0 1,0 98,92 A2,2 0 1,0 94,92 M104,92 A2,2 0 1,0 108,92 A2,2 0 1,0 104,92 M94,106 A2,2 0 1,0 98,106 A2,2 0 1,0 94,106 M104,106 A2,2 0 1,0 108,106 A2,2 0 1,0 104,106" />
+</vector>

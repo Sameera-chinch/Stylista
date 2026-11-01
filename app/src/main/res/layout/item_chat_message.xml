@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+
+    <!-- USER MESSAGE BUBBLE -->
+    <LinearLayout
+        android:id="@+id/layoutUserMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/button_pastel_blue"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:layout_marginStart="48dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivUserAttachment"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvUserText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/charcoal"
+            android:textSize="14sp"
+            android:lineSpacingExtra="2dp" />
+
+    </LinearLayout>
+
+    <!-- BOT MESSAGE BUBBLE -->
+    <LinearLayout
+        android:id="@+id/layoutBotMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:layout_marginEnd="28dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/layoutBotBubbleContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/style_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/tvBotBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stylista Stylist"
+                android:textColor="@color/pastel_baby_blue_dark"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvBotText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/charcoal"
+                android:textSize="14sp"
+                android:lineSpacingExtra="3dp" />
+
+            <!-- Retry button on error / fallback -->
+            <TextView
+                android:id="@+id/btnRetryQuery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_category_badge"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="↻ Retry with Cloud AI"
+                android:textColor="@color/pastel_baby_blue_dark"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- RECOMMENDED PRODUCTS CAROUSEL IN CHAT -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBotProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Left Earring Hook -->
+    <path android:strokeColor="#D4AF37" android:strokeWidth="3" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M72,50 C62,40 60,65 72,75 L72,100" />
+    <!-- Left Pearl Drop -->
+    <path android:fillColor="#FFFFFF" android:strokeColor="#D0D7DE" android:strokeWidth="2" android:pathData="M72,100 C60,116 60,146 72,154 C84,146 84,116 72,100 Z" />
+    <path android:fillColor="#FFF8E1" android:pathData="M68,120 A4,4 0 1,0 76,120 A4,4 0 1,0 68,120" />
+    <!-- Right Earring Hook -->
+    <path android:strokeColor="#D4AF37" android:strokeWidth="3" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M128,50 C118,40 116,65 128,75 L128,100" />
+    <!-- Right Pearl Drop -->
+    <path android:fillColor="#FFFFFF" android:strokeColor="#D0D7DE" android:strokeWidth="2" android:pathData="M128,100 C116,116 116,146 128,154 C140,146 140,116 128,100 Z" />
+    <path android:fillColor="#FFF8E1" android:pathData="M124,120 A4,4 0 1,0 132,120 A4,4 0 1,0 124,120" />
+</vector>

@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Soft Draped Top -->
+    <path android:fillColor="#E2E8F0" android:strokeColor="#2C302E" android:strokeWidth="3.5" android:strokeLineJoin="round" android:pathData="M65,55 L84,45 L116,45 L135,55 L158,82 L144,95 L130,80 L134,162 L66,162 L70,80 L56,95 L42,82 Z" />
+    <!-- Wrap Overlay -->
+    <path android:strokeColor="#659ACB" android:strokeWidth="3" android:pathData="M84,45 Q105,95 130,110 M116,45 Q95,95 70,110" />
+</vector>

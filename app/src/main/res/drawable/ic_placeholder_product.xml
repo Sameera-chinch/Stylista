@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Background Card -->
+    <path
+        android:fillColor="#FBF9F4"
+        android:pathData="M24,12 L176,12 A16,16 0 0,1 192,28 L192,172 A16,16 0 0,1 176,188 L24,188 A16,16 0 0,1 8,172 L8,28 A16,16 0 0,1 24,12 Z" />
+    
+    <!-- Subtle Inner Accent -->
+    <path
+        android:strokeColor="#EAE5D8"
+        android:strokeWidth="1.5"
+        android:pathData="M30,18 L170,18 A12,12 0 0,1 182,30 L182,170 A12,12 0 0,1 170,182 L30,182 A12,12 0 0,1 18,170 L18,30 A12,12 0 0,1 30,18 Z" />
+
+    <!-- Fashion Hanger / Bag Silhouette -->
+    <!-- Hook -->
+    <path
+        android:strokeColor="#659ACB"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M100,56 C100,46 112,46 112,54 C112,62 100,66 100,74" />
+    <!-- Hanger Triangle -->
+    <path
+        android:strokeColor="#2C302E"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M100,74 L60,110 L140,110 Z" />
+    <!-- Crossbar -->
+    <path
+        android:strokeColor="#E6A817"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M60,110 L140,110" />
+
+    <!-- Stylista Sparkle -->
+    <path
+        android:fillColor="#FBEA8C"
+        android:pathData="M142,66 L145,74 L153,77 L145,80 L142,88 L139,80 L131,77 L139,74 Z" />
+</vector>

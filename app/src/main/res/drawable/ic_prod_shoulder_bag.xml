@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Baguette Shoulder Strap -->
+    <path android:strokeColor="#2C302E" android:strokeWidth="4" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M56,110 C56,45 144,45 144,110" />
+    <!-- Curved Body -->
+    <path android:fillColor="#A2C2E8" android:strokeColor="#2C302E" android:strokeWidth="3.5" android:strokeLineJoin="round" android:pathData="M44,110 Q100,102 156,110 L152,152 A12,12 0 0,1 140,164 L60,164 A12,12 0 0,1 48,152 Z" />
+    <!-- Flap Overlay -->
+    <path android:fillColor="#DCEBFA" android:strokeColor="#2C302E" android:strokeWidth="2.5" android:pathData="M46,112 Q100,105 154,112 L150,132 Q100,140 50,132 Z" />
+    <!-- Gold Clasp -->
+    <path android:fillColor="#E6A817" android:pathData="M94,130 L106,130 A3,3 0 0,1 109,133 L109,139 A3,3 0 0,1 106,142 L94,142 A3,3 0 0,1 91,139 L91,133 A3,3 0 0,1 94,130 Z" />
+</vector>

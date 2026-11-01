@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_sheet_background"
+    android:padding="20dp">
+
+    <!-- Handle Bar -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/handle_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sort By"
+        android:textColor="@color/charcoal"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="serif" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/neutral_divider" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioSortFeatured"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Featured &amp; Recommended"
+            android:textColor="@color/charcoal"
+            android:textSize="14sp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioSortPriceLowHigh"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Price: Low to High"
+            android:textColor="@color/charcoal"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioSortPriceHighLow"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Price: High to Low"
+            android:textColor="@color/charcoal"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioSortNewest"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Newest First"
+            android:textColor="@color/charcoal"
+            android:textSize="14sp" />
+
+    </RadioGroup>
+
+</LinearLayout>

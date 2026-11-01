@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Silver Bracelet Oval Loop -->
+    <path android:strokeColor="#B0BEC5" android:strokeWidth="4.5" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M100,52 C145,52 165,85 165,115 C165,145 145,158 100,158 C55,158 35,145 35,115 C35,85 55,52 100,52 Z" />
+    <!-- Star Charm -->
+    <path android:fillColor="#90A4AE" android:strokeColor="#78909C" android:strokeWidth="1.5" android:pathData="M100,158 L103,168 L113,168 L105,174 L108,184 L100,178 L92,184 L95,174 L87,168 L97,168 Z" />
+    <!-- Heart Charm -->
+    <path android:fillColor="#A2C2E8" android:pathData="M142,145 C138,141 133,144 133,148 C133,155 142,160 142,160 C142,160 151,155 151,148 C151,144 146,141 142,145 Z" />
+</vector>

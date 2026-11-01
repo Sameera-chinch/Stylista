@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- High Waist Leggings -->
+    <path android:fillColor="#212529" android:strokeColor="#111111" android:strokeWidth="3.5" android:strokeLineJoin="round" android:pathData="M70,45 L130,45 L135,78 L124,168 L103,168 L100,105 L97,168 L76,168 L65,78 Z" />
+    <!-- Performance Side Piping -->
+    <path android:strokeColor="#A2C2E8" android:strokeWidth="2.5" android:strokeLineCap="round" android:fillColor="#00000000" android:pathData="M70,55 C65,95 72,145 78,168 M130,55 C135,95 128,145 122,168" />
+</vector>

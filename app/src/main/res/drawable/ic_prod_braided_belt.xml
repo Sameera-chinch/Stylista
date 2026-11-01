@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <path android:fillColor="#FDFBF7" android:pathData="M20,16 L180,16 A16,16 0 0,1 196,32 L196,168 A16,16 0 0,1 180,184 L20,184 A16,16 0 0,1 4,168 L4,32 A16,16 0 0,1 20,16 Z" />
+    <!-- Braided Weave Strap -->
+    <path android:fillColor="#BCAAA4" android:strokeColor="#8D6E63" android:strokeWidth="2.5" android:pathData="M28,94 L172,94 L172,120 L28,120 Z" />
+    <path android:strokeColor="#6D4C41" android:strokeWidth="2" android:pathData="M40,94 L50,120 M55,94 L65,120 M70,94 L80,120 M85,94 L95,120 M100,94 L110,120 M115,94 L125,120 M130,94 L140,120 M145,94 L155,120" />
+    <!-- Silver Buckle -->
+    <path android:strokeColor="#B0BEC5" android:strokeWidth="4.5" android:fillColor="#00000000" android:pathData="M32,88 L60,88 A4,4 0 0,1 64,92 L64,124 A4,4 0 0,1 60,128 L32,128 A4,4 0 0,1 28,124 L28,92 A4,4 0 0,1 32,88 Z" />
+</vector>
