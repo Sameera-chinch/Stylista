@@ -47,4 +47,11 @@ class LocalFashionStylistTest {
         val returnResponse = LocalFashionStylist.generateLocalResponse("What is your return policy?")
         assertTrue(returnResponse.contains("return", ignoreCase = true) || returnResponse.contains("delivery", ignoreCase = true))
     }
+
+    @Test
+    fun testBlueDressQuery() {
+        val blueDressResponse = LocalFashionStylist.generateLocalResponse("Suggest me a blue dress")
+        assertTrue(blueDressResponse.contains("blue", ignoreCase = true))
+        assertTrue(blueDressResponse.contains("dress", ignoreCase = true))
+    }
 }

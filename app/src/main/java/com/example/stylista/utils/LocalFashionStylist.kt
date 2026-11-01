@@ -33,6 +33,12 @@ object LocalFashionStylist {
         if (lower.contains("bag") || lower.contains("tote") || lower.contains("jewelry") || lower.contains("necklace") || lower.contains("accessory") || lower.contains("accessories")) {
             return "Our accessories collection features leather bags, fine jewelry, sunglasses, and timepieces to complete any look."
         }
+        if (lower.contains("blue") && lower.contains("dress")) {
+            return "While we don't have a solid blue dress, our Floral Midi Dress and Summer Sundress look fantastic layered with our washed denim jacket and pastel baby-blue shoulder bag!"
+        }
+        if (lower.contains("blue")) {
+            return "Looking for blue pieces? Check out our pastel baby-blue shoulder bag, washed denim jacket, and navy velvet headband!"
+        }
         if (lower.contains("dress") || lower.contains("western") || lower.contains("sundress")) {
             return "Explore our Western wear collection featuring summer sundresses, denim jackets, and tailored separates."
         }
@@ -146,12 +152,46 @@ object LocalFashionStylist {
             )
         }
 
-        // Dresses & Western
-        if (lower.contains("dress") || lower.contains("western") || lower.contains("sundress") || lower.contains("midi") || lower.contains("skirt")) {
-            val dresses = allProducts.filter { it.category.equals("Western", ignoreCase = true) }
+        // Blue dress query
+        if (lower.contains("blue") && (lower.contains("dress") || lower.contains("sundress") || lower.contains("gown") || lower.contains("midi") || lower.contains("frock"))) {
+            val floralDress = allProducts.find { it.id == 22 } ?: allProducts.firstOrNull { it.subcategory.equals("Dresses", ignoreCase = true) }
+            val denimJacket = allProducts.find { it.id == 23 }
+            val blueBag = allProducts.find { it.id == 3 }
+            val items = listOfNotNull(floralDress, denimJacket, blueBag)
             return LocalStylistResult(
-                reply = "From breezy summer sundresses to floral midi styles and denim jackets, here are our trending western essentials:",
+                reply = "We don't currently have a solid blue dress in our collection, but our Floral Midi Dress pairs gorgeously with our washed Denim Jacket and pastel baby-blue Shoulder Bag for an effortless blue-accented look!",
+                productIds = items.map { it.id }
+            )
+        }
+
+        // General Blue collection
+        if (lower.contains("blue") && !lower.contains("bag") && !lower.contains("watch")) {
+            val blueItems = allProducts.filter {
+                it.id in listOf(23, 3, 21, 27, 15) || it.description.contains("blue", ignoreCase = true)
+            }
+            return LocalStylistResult(
+                reply = "Here are our trending blue essentials, from our washed denim jacket and pastel baby-blue shoulder bag to navy velvet headbands:",
+                productIds = blueItems.take(4).map { it.id }
+            )
+        }
+
+        // Dresses
+        if (lower.contains("dress") || lower.contains("sundress") || lower.contains("midi") || lower.contains("frock")) {
+            val dresses = allProducts.filter {
+                it.subcategory.equals("Dresses", ignoreCase = true) || it.name.contains("Dress", ignoreCase = true)
+            }
+            return LocalStylistResult(
+                reply = "From breezy summer sundresses to floral midi styles and comfortable maternity wear, here are our trending dresses:",
                 productIds = dresses.map { it.id }
+            )
+        }
+
+        // Western
+        if (lower.contains("western") || lower.contains("skirt") || lower.contains("jacket") || lower.contains("denim")) {
+            val western = allProducts.filter { it.category.equals("Western", ignoreCase = true) }
+            return LocalStylistResult(
+                reply = "From breezy summer sundresses to floral midi styles and washed denim jackets, here are our trending western essentials:",
+                productIds = western.map { it.id }
             )
         }
 
