@@ -42,7 +42,7 @@ class DefaultChatbotTierStrategy : IChatbotTierStrategy {
 
     override suspend fun executeTier1(query: String, context: Context): ChatbotResponse? = withContext(Dispatchers.IO) {
         val directKey = BuildConfig.GEMINI_API_KEY
-        if (directKey.isNotBlank()) {
+        if (directKey.isNotBlank() && directKey.startsWith("AIzaSy")) {
             val response = executeGeminiRest(query, directKey, context)
             if (response != null) return@withContext response
         }
@@ -56,7 +56,7 @@ class DefaultChatbotTierStrategy : IChatbotTierStrategy {
                     .build()
                 val sysContent = Content(role = "system", parts = listOf(TextPart(systemPrompt)))
 
-                val candidateModels = listOf("gemini-3.8-flash", "gemini-3.8-flash-lite", "gemini-3.0-flash", "gemini-2.5-flash", "gemini-2.0-flash")
+                val candidateModels = listOf("gemini-2.5-flash", "gemini-3.8-flash", "gemini-3.0-flash")
                 var rawText: String? = null
 
                 for (modelName in candidateModels) {
@@ -77,7 +77,11 @@ class DefaultChatbotTierStrategy : IChatbotTierStrategy {
                             break
                         }
                     } catch (e: Exception) {
-                        Log.w(TAG, "Tier 1 ($modelName) failed: ${e.message}")
+                        val msg = e.message ?: ""
+                        Log.w(TAG, "Tier 1 ($modelName) failed: $msg")
+                        if (msg.contains("firebasevertexai") || msg.contains("Vertex AI in Firebase API")) {
+                            break
+                        }
                     }
                 }
 
@@ -186,11 +190,19 @@ class DefaultChatbotTierStrategy : IChatbotTierStrategy {
             var connection: HttpURLConnection? = null
             try {
                 val catalogSummary = ChatbotGroundingHelper.buildSystemInstruction(context)
-                val url = URL("https://api.x.ai/v1/chat/completions")
+                val isGroq = apiKey.startsWith("gsk_")
+                val endpointUrl = if (isGroq) {
+                    "https://api.groq.com/openai/v1/chat/completions"
+                } else {
+                    "https://api.x.ai/v1/chat/completions"
+                }
+                val modelName = if (isGroq) "openai/gpt-oss-120b" else "grok-beta"
+
+                val url = URL(endpointUrl)
                 connection = (url.openConnection() as HttpURLConnection).apply {
                     requestMethod = "POST"
-                    connectTimeout = 12_000
-                    readTimeout = 12_000
+                    connectTimeout = 8_000
+                    readTimeout = 8_000
                     doInput = true
                     doOutput = true
                     setRequestProperty("Content-Type", "application/json")
@@ -198,7 +210,7 @@ class DefaultChatbotTierStrategy : IChatbotTierStrategy {
                 }
 
                 val payload = JSONObject().apply {
-                    put("model", "grok-beta")
+                    put("model", modelName)
                     val messages = JSONArray().apply {
                         put(JSONObject().apply {
                             put("role", "system")
@@ -230,18 +242,18 @@ class DefaultChatbotTierStrategy : IChatbotTierStrategy {
                         ChatbotResponse(
                             replyText = parsed.reply,
                             recommendedProductIds = parsed.productIds,
-                            tierLabel = "Backup AI",
-                            isFallback = true
+                            tierLabel = "AI",
+                            isFallback = false
                         )
                     } else {
                         null
                     }
                 } else {
-                    Log.w(TAG, "Tier 2 (xAI) HTTP error: $responseCode")
+                    Log.w(TAG, "Tier 2 HTTP error: $responseCode")
                     null
                 }
             } catch (e: Exception) {
-                Log.w(TAG, "Tier 2 (xAI) execution failed: ${e.message}")
+                Log.w(TAG, "Tier 2 execution failed: ${e.message}")
                 null
             } finally {
                 connection?.disconnect()
